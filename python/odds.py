@@ -14,7 +14,7 @@ for i in range(10):
     #reduzi para segundos, assim passa mais rapido.
     right_this_minute = datetime.today().second
     if isOdd(right_this_minute):
-        # troquei minute por second
+        # troquei 'minute' por 'second'
         print("This second seems a little odd.")
     else:
         print("Not an odd second.")
