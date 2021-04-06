@@ -3,8 +3,8 @@
 Jogo da forca.
 
 O jogo da forca consiste basicamente de um jogador tentar adivinhar uma palavra secreta, sendo exibida apenas uma sequencia de traços "_" contendo a quantidade de letras da palavra. O jogador terá um numero pré definido de chances, onde ele poderá ir falando letras que imagina fazer parte da palavra. Para cada letra acertada a posição onde a letra se encontra na palavra será revelada e para cada erro uma chance será diminuída. O jogo termina de duas maneiras:
-# A primeira, o jogador consegue acertar todas as letras e a palavra se revela por completo.
-# A segunda, o jogador erra até que suas chances zerem, assim ele perde o jogo.
+A primeira opção, o jogador consegue acertar todas as letras e a palavra se revela por completo.
+A segunda opção, o jogador erra até que suas chances zerem, assim ele perde o jogo.
 
 Esse jogo poderá ser em pares ou apenas um jogador.
 
