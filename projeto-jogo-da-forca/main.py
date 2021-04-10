@@ -1,4 +1,10 @@
+
+#coding: utf-8
 import os
+
+'''
+    executar com python3 via terminal - python .\main.py -
+'''
 
 # guarda as letras já informadas
 def words(char, list_char):
