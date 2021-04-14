@@ -45,14 +45,19 @@ def prints(word):
         show += (" "+ (word[i]))
     print("WORD: "+show)
 
-# o jogador informa uma palavra
+# o jogador informa uma palavra e uma dica
 def word_game():
-    word = input("digite uma palavra para o inicio do jogo\n")
+    word = input("Digite uma palavra para o inicio do jogo :\n")
+    trip = input("Informe uma dica para a palavra :\n")
     os.system('cls')
+    with open('database.txt', 'a') as add:
+        print(word,'|', trip, file=add)
     return word.upper()
 
+
+
 def char_game():
-    char = input("iforme uma letra: ")
+    char = input("Iforme uma letra :")
     os.system('cls')
     return char.upper()
 
