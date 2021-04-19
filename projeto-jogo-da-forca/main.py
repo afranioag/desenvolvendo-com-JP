@@ -49,20 +49,30 @@ def prints(word):
 def word_game():
     word = input("Digite uma palavra para o inicio do jogo :\n")
     trip = input("Informe uma dica para a palavra :\n")
-    os.system('cls')
+    if os.name == 'posix':
+        os.system('clear')
+    else:
+        os.system('cls')
     with open('database.txt', 'a') as add:
-        print(word,'|', trip, file=add)
+        print(word, trip, file=add)
     return word.upper()
 
 
 
 def char_game():
     char = input("Iforme uma letra :")
-    os.system('cls')
+    if os.name == 'posix':
+        os.system('clear')
+    else:
+        os.system('cls')
+
     return char.upper()
 
 def game():
-    os.system('cls')
+    if os.name == 'posix':
+        os.system('clear')
+    else:
+        os.system('cls')
     word = word_game()
     word_encrypt = encrypts(word)
     chances = 5
@@ -80,7 +90,11 @@ def game():
             chances -= 1
 
             if(chances == 0):
-                os.system('cls')
+                if os.name == 'posix':
+                    os.system('clear')
+                else:
+                    os.system('cls')
+
                 print("\n\nYOU LOSER!!!\n\n\n")
                 break
 

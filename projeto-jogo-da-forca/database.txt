@@ -1,1 +1,8 @@
-casa | tem um teto
+casa
+tem um teto
+cavalo
+é um animal
+corvo
+é um passaro
+macaco é um mamifero
+urubu uma ave
