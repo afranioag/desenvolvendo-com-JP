@@ -45,20 +45,41 @@ def prints(word):
         show += (" "+ (word[i]))
     print("WORD: "+show)
 
-# o jogador informa uma palavra e uma dica
+# o jogador informa uma palavra e uma dica e essas são armazenadas em arquivo txt
 def word_game():
     word = input("Digite uma palavra para o inicio do jogo :\n")
+    if os.name == 'posix':
+        os.system('clear')
+    else:
+        os.system('cls')
+
     trip = input("Informe uma dica para a palavra :\n")
     if os.name == 'posix':
         os.system('clear')
     else:
         os.system('cls')
+    
     with open('database.txt', 'a') as add:
-        print(word, trip, file=add)
+        print(word, file=add)
+        print(trip, file=add)
     return word.upper()
-
-
-
+#armazena as palavras e as dicas em um dicioário
+def data_base() -> dict:
+    key = []
+    value = []
+    db = {}
+    with open('database.txt') as look:
+        w = look.read()
+        colection = w.split('\n')
+        colection.pop()
+    for i in range(len(colection)):
+        if i%2 == 0:
+            key.append(colection[i])
+        else:
+            value.append(colection[i])
+    for i in range(len(key)):
+        db[key[i]] = value[i]
+    return db
 def char_game():
     char = input("Iforme uma letra :")
     if os.name == 'posix':
@@ -101,8 +122,13 @@ def game():
         word_encrypt = update(word_encrypt, word, char)
 
         if(compare(word, word_encrypt)):
-            os.system('cls')
+            if(chances == 0):
+                if os.name == 'posix':
+                    os.system('clear')                          
+                else:
+                    os.system('cls') 
             print("\n\nYOU WIN!!!\n\n\n")
+            print(data_base())
             break
         
         

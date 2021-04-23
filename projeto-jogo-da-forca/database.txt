@@ -4,5 +4,17 @@ cavalo
 é um animal
 corvo
 é um passaro
-macaco é um mamifero
-urubu uma ave
+macaco 
+é um mamifero
+urubu 
+é uma ave
+mosca 
+é um inseto
+borboleta 
+é um inseto
+paris
+é uma cidade
+colombia
+é um pais
+javali
+é um animal
